@@ -13,6 +13,7 @@ var value=document.querySelector("#value")
 
 let count=0;
 let number;
+let noc=0; 
 
 resetbtn.addEventListener("click",()=>{
     if(count==0){
@@ -22,6 +23,8 @@ resetbtn.addEventListener("click",()=>{
         score.style.opacity=1;
         score.textContent="Moves Left: "
         value.textContent=20;
+        goal = Math.floor(Math.random() * 100);
+        noc = 1; 
         count++;
     }
     else{
@@ -35,19 +38,19 @@ resetbtn.addEventListener("click",()=>{
         count--;
     }
 })
-let noc=1;
+
 submitbtn.addEventListener('click',()=>{
-    
-     
    if( resetbtn.textContent=="Reset"){
-    ++noc;
-     number=input.value;
-     input.value=" ";
+    if(input.value!="") noc++;
+    number=input.value;
+    input.value=" ";
+    
      if(noc<=20){ 
          value.textContent=20-noc+1;
          let delta=number-goal;
-         if(number>100){
+         if(number>100||number<=0){
              time.textContent="Not Valid";
+             return;
          }
          else if(delta==0){
              time.textContent="Congrats!!!";
@@ -56,19 +59,19 @@ submitbtn.addEventListener('click',()=>{
              score.textContent="Score:"
              value.textContent=100-noc+1;
          }
-         else if(delta<5&delta>0){
+         else if(delta<3&delta>0){
              resultvalue.textContent='Little Low';
              time.textContent="Continue";
          }
-         else if(delta<0&&delta>-5){
+         else if(delta<0&&delta>-3){
              resultvalue.textContent='Little High';
              time.textContent="Continue";
          }
-         else if(delta>5){
+         else if(delta>3){
              resultvalue.textContent='Aim Low';
              time.textContent="Continue";
          }
-         else if(delta<-5){
+         else if(delta<-3){
              resultvalue.textContent='Aim High';
              time.textContent="Continue";
          }
