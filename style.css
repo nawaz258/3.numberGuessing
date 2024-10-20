@@ -1,0 +1,203 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+body {
+    height: 100vh;
+    background-color: #c1b8b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#out-container{
+    height: 80vh;
+    width: 80vw;
+    max-width: 500px; 
+    min-width: 300px; 
+    
+    background-color:#d4d2d1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3.75%;
+    box-shadow: -20px 14px 5px #a7a6a7  ;
+    min-width: 300px;
+    min-height: 600px;
+
+}
+#circle{
+    height: 3%;
+    width: 95%;
+    /* background-color:blanchedalmond; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#shape{
+    height: 65%;
+    width: 3%;
+    background-color:#010103;
+    border-radius: 50%;
+    margin-bottom:1% ;
+}
+#container{
+    height: 95%;
+    width: 95%;
+    background-color:#d4d2d1;
+    border:solid #010000 3px;
+    border-radius: 3.75%;
+    box-shadow: inset 1px 1px 30px  #a7a6a7 ;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#nutbolt{
+    height: 5%;
+    width: 95%;
+    /* background-color: crimson; */
+}
+#head{
+    height: 15%;
+    width: 100%;
+    /* background-color: orange; */
+    text-align:center;
+    font-weight: bolder;
+}
+.time{
+    margin-top: 5%;;
+}
+#screen{
+    height: 20%;
+    width: 95%;
+    /* background-color:blue ; */
+    background-color:#eaeceb ;
+    border: solid 1px black;
+    border-radius: 30px;
+    
+    font-weight: bold ;
+    margin-bottom: 5%;
+    box-shadow: -5px 5px 8px #a7a6a7 ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#num{
+    height: 95%;
+    width: 50%;
+    /* background-color:aquamarine; */
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    text-wrap:wrap;
+    font-size: 250%;
+    transition: text 0.5s ease;
+   
+}
+#score{
+    height: 95%;
+    width: 46%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    text-wrap:wrap;
+    font-size: 200%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+#action{
+    height: 25%;
+    width: 95%;
+    /* background-color: yellow; */
+    display: flex;
+}
+#result {
+    height: 100%;
+    width: 50%;
+    /* background-color: green; */
+    text-align: center;
+    font-weight: 600;
+    font-size: 200%;
+    padding-top: 12%;
+    border-radius: 5px;
+    box-shadow:1px 1px 10px  #a7a6a7 ;
+    transition: text 0.6s ease;
+}
+#user {
+    height: 100%;
+    width: 50%;
+    /* background-color: blue; */
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px  #a7a6a7 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    padding:2% 0  5% 0;
+}
+
+.input{
+    height: 200%;
+    width: 95%;
+    border-radius: 10px;
+
+}
+#submitbtn{
+    margin-top: 10px;
+    height: 100%;
+    width: 150%;
+    border-radius: 5px;
+    padding: 5px;
+    transform:translateX(-15px) ;
+}
+
+#reset{
+    height: 15%;
+    width: 100%;
+    /* background-color:purple; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#resetbtn{
+    margin-top: 10px;
+    height: 50%;
+    width: 60%;
+    border-radius: 10px;
+    padding: 5px;
+    transform:translateY(-10px) ;
+}
+#footer{
+    padding: 5%;
+    height: 10%;
+    width: 80%;
+    /* background-color:white; */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow:1px 1px 10px  #a7a6a7 ;
+}
+button{
+    transition: background-color 0.2s ease;
+}
+button:hover{
+    background-color: rgba(0, 0, 0, 0.597);
+    color: white;
+   
+}
